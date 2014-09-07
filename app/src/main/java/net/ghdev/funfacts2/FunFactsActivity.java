@@ -18,6 +18,7 @@ import static android.graphics.Color.RED;
 public class FunFactsActivity extends Activity {
 
     private FactBook mFactBook = new FactBook();
+    private ColorWheel mColorWheel = new ColorWheel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,10 @@ public class FunFactsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String fact = mFactBook.getFact();
+                int color = mColorWheel.getColor();
                 // Update the label with our dynamic fact
                 factLabel.setText(fact);
-                relativeLayout.setBackgroundColor(RED);
+                relativeLayout.setBackgroundColor(color);
             }
         };
         showFactButton.setOnClickListener(listener);
