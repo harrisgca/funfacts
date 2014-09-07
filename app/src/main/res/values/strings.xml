@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FunFacts2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="show_another">Show Another Fun Fact</string>
+    <string name="ants_stretch">Ants stretch when they wake up in the morning.</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
