@@ -1,21 +1,21 @@
 package net.ghdev.funfacts2;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+//import android.view.Menu;
+//import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+//import android.widget.Toast;
 
-import java.util.Random;
-
-import static android.graphics.Color.RED;
 
 
 public class FunFactsActivity extends Activity {
+
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
 
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
@@ -26,9 +26,10 @@ public class FunFactsActivity extends Activity {
         setContentView(R.layout.activity_fun_facts);
 
         final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);
-
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
+
         Button showFactButton = (Button) findViewById(R.id.showFactButton);
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,10 @@ public class FunFactsActivity extends Activity {
             }
         };
         showFactButton.setOnClickListener(listener);
+
+        //
+        //Toast.makeText(this, "Message created!", Toast.LENGTH_LONG).show();
+        Log.d(TAG, "Logging from the onCreate()method!");
     }
 
 
